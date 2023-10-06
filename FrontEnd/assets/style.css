@@ -34,6 +34,7 @@ body {
 ol, ul {
 	list-style: none;
 }
+
 blockquote, q {
 	quotes: none;
 }
@@ -58,6 +59,48 @@ header {
 	justify-content: space-between;
 	margin: 50px 0
 }
+/** LOGIN CSS **/
+.page_connexion{
+	width: 33%;
+	margin:auto;
+	display: flex;
+	flex-direction: column;
+	justify-self: center;
+}
+
+.page_connexion h2{
+	margin:auto;
+}
+
+.page_connexion form{
+	margin: 2rem 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.page_connexion input{
+	height: 2rem;
+	margin-top: 0.5rem;
+	margin-bottom: 1rem;
+	border-style:hidden;
+	box-shadow: 0px 0px 5px rgb(201, 199, 199);
+}
+
+.wrong {
+	background-color: rgb(247, 61, 61);
+}
+
+.correct {
+	background-color: #215c1f;
+}
+
+.page_connexion a{
+	margin: auto;
+	color: black;
+}
+
+
+/** END LOGIN CSS**/
 section {
 	margin: 50px 0
 }
@@ -98,6 +141,11 @@ nav li {
 li:hover {
 	color: #B1663C;
 }
+
+li.inactive {
+	display: none;
+}
+
 #introduction {
 	display: flex;
 	align-items: center;
@@ -154,7 +202,7 @@ li:hover {
 	margin: 0 5px;
 }
 
-.filtres button:hover{
+.filtres button:hover, .filtres button.active{
 	background-color: #1D6154;
 	color:white;
 }
