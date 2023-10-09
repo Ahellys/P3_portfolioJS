@@ -86,8 +86,13 @@ header {
 	box-shadow: 0px 0px 5px rgb(201, 199, 199);
 }
 
-.wrong {
-	background-color: rgb(247, 61, 61);
+#email_error, #password_error {
+	color: red;
+	font-weight: bold;
+}
+
+.inactive {
+	display: none;
 }
 
 .correct {

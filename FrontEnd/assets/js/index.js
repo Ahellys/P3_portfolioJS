@@ -3,8 +3,8 @@ const buttonTous = document.getElementById("buttonTous");
 const buttonObjets = document.getElementById("buttonObjets");
 const buttonAppartements = document.getElementById("buttonAppartements");
 const buttonHotels = document.getElementById("buttonHotels");
-console.log(window.sessionStorage);
-if (window.sessionStorage.getItem("token") == "undefined"){
+console.log(window.sessionStorage.getItem("token"));
+if (window.sessionStorage.getItem("token") == null){
     document.getElementById("logged").classList.add("inactive");
 } else {
     document.getElementById("anon").classList.add("inactive");

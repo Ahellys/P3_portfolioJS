@@ -29,8 +29,10 @@
 		<h2> Login </h2>
 		<form>
 				<label for="email">E-mail</label>
+				<span class="inactive" id="email_error">Mauvais identifiant</span>
 				<input type="email" name="email" id="email" required/>
 				<label for="password">Mot de passe</label>
+				<span class="inactive" id="password_error">Mauvais mot de passe</span>
 				<input type="password" name="password" id="password" required/>
 				<input type="submit" value="Se connecter" />
 		</form>
