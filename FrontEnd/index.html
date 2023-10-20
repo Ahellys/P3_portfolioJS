@@ -8,6 +8,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 	<meta name="description" content="">
 	<link rel="stylesheet" href="./assets/style.css">
 </head>
@@ -18,8 +19,8 @@
 		<ul>
 			<li>projets</li>
 			<li>contact</li>
-			<li id="anon">login</li>
-			<li id="logged">logout</li>
+			<li id="login">login</li>
+			<li id="logout">logout</li>
 			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
 		</ul>
 	</nav>
@@ -37,8 +38,20 @@
 		</article>
 	</section>
 	<section id="portfolio">
-		<h2>Mes Projets</h2>
-		<div class="filtres">
+			<h2>Mes Projets <a href="#modal1" class="js_modal"><span id ="editSpan" class="material-symbols-outlined" >edit_square</span>Modifier</a></h2>
+			<aside class="modal" id="modal1" style="display:none;">
+				<div class="modal_header"><span class="material-symbols-outlined" >open_in_new</span> <p>Mode édition</p></div>
+				<div class="modal_wrapper js_modal_stop">
+					<h3></h3>
+					<span id="closeCross" class="material-symbols-outlined">close</span>
+					<span id="returnArrow" class="material-symbols-outlined inactive">arrow_back</span>
+					<div class="modal_gallery"></div>
+					<form id="workForm" method="POST" enctype='multipart/form-data'></form>
+					<hr/>
+					<input type="submit">
+				</div>
+			</aside>
+		<div id="filtres" class="filtres">
 			<button class="active" id="buttonTous">Tous</button>
 			<button id="buttonObjets">Objets</button>
 			<button id="buttonAppartements">Appartements</button>

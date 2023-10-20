@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+
 ol, ul {
 	list-style: none;
 }
@@ -61,11 +62,18 @@ header {
 }
 /** LOGIN CSS **/
 .page_connexion{
-	width: 33%;
+	width: 45%;
+	height: auto;
 	margin:auto;
 	display: flex;
 	flex-direction: column;
 	justify-self: center;
+	position: relative;
+	
+}
+
+#mainLogin {
+	height: 90vh;
 }
 
 .page_connexion h2{
@@ -78,12 +86,17 @@ header {
 	flex-direction: column;
 }
 
+.page_connexion label{
+	font-size: 1rem;
+	margin: 1rem 0;
+}
+
 .page_connexion input{
-	height: 2rem;
-	margin-top: 0.5rem;
-	margin-bottom: 1rem;
+	height: 3rem;
+	margin-bottom: 2rem;
+	font-size: 1rem;
 	border-style:hidden;
-	box-shadow: 0px 0px 5px rgb(201, 199, 199);
+	box-shadow: 0px 0px 10px rgb(201, 199, 199);
 }
 
 #email_error, #password_error {
@@ -91,18 +104,11 @@ header {
 	font-weight: bold;
 }
 
-.inactive {
-	display: none;
-}
-
-.correct {
-	background-color: #215c1f;
-}
-
 .page_connexion a{
 	margin: auto;
 	color: black;
 }
+
 
 
 /** END LOGIN CSS**/
@@ -178,17 +184,217 @@ li.inactive {
 	text-align: center;
 	margin-bottom: 1em;
 }
-.gallery {
+
+#portfolio button{
+	color: black;
+	font-weight: bold;
+	
+}
+
+/**** MODAL CSS ****/
+.modal{
+	position: fixed;
+	display: grid;
+	top: 0;
+	left: 0;
 	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+}
+
+.modal_header{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: black;
+	color:white;
+	width: 100%;
+	height: 2rem;
+	font-size: 2em;
+}
+
+.modal_wrapper{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-self: center;
+	max-width: 70vh;
+	max-height: 75vh;
+	width: 700px;
+	height: 800px;
+	padding: 2rem;
+	overflow: auto;
+	background-color: white;
+}
+
+#addPic {
+	position: relative;
+	top: 10rem;
+}
+
+#workForm {
+	display: flex;
+	width: 70%;
+	height: 100%;
+	margin: 0 auto;
+	flex-direction: column;
+}
+
+.modal_wrapper h3{
+	justify-self: center;
+	margin: 3rem auto;
+	font-size: 1.5rem;
+}
+
+.modal_gallery{
+	width: auto;
+	height: auto;
+	display: grid;
+	column-gap: 2%;
+	row-gap: 5%;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.modal_gallery figure{
+	position: relative;
+}
+
+.modal_gallery img {
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+}
+
+#closeCross {
+	position: absolute;
+	height: auto;
+	top: 3px;
+	right: 3px;
+}
+
+#returnArrow {
+	position: absolute;
+	height: auto;
+	top: 3px;
+	left: 3px;
+}
+
+figure span{
+	position: absolute;
+	height: auto;
+	top: 5px;
+	right: 5px;
+	background-color: black;
+	color: white;
+}
+
+.modal_wrapper #title, select{
+	border-style: hidden;
+	margin-top: 1rem;
+	height: 10%;
+	box-shadow: 0px 0px 5px rgb(201, 199, 199);
+}
+
+#validate,#addPic {
+	border-style: hidden;
+	padding: 0.6rem 2rem;
+}
+
+#zoneImage {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	width: 50%;
+	height: 100%;
+	
+}
+
+#zoneImage p{
+	margin: auto;
+}
+
+#zoneImage img{
+	width: 100%;
+	height: 100%;
+	object-fit:fill;
+	margin: 0;
+}
+
+#addFile{
+	background-color: rgb(228, 236, 238);
+	height: 13rem;
+	width: 100%;
+}
+
+#addPicture{
+	font-size: 6rem;
+	margin: auto;
+	color: rgb(190, 190, 190);
+}
+
+.formLabel {
+	margin-top: 3rem;
+	font-size: 1rem;
+}
+
+
+
+#addFileButton{
+	font-family: 'Syne';
+	font-weight: 700;
+	color: rgb(33, 90, 165);
+	background-color: rgb(207, 207, 207);
+	margin : auto ;
+	width: 80%;
+	padding: 0.7rem 0.5rem;
+	text-align: center;
+	border-radius: 60px ;
+}
+
+#fileInput{
+	width: 70%;
+	height: 10rem;
+	padding:0;
+	margin: 0 auto; 
+	position: absolute;
+	box-shadow:none;
+	opacity: 0;
+}
+
+/**** END MODAL CSS ****/
+
+
+/******* PORTFOLIO CSS ***********/
+.gallery {
+	width: auto;
+	height: auto;
+	margin : 4rem 0;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-column-gap: 20px;
-	grid-row-gap: 20px;
+	grid-row-gap: 3rem;
 }
 
+#portfolio a{
+	all: unset;
+	color: black;
+	font-size: small;
+}
+
+#editSpan{
+	font-size: 1rem;
+	margin: 0 0.7rem;
+}
 .gallery img {
 	width: 100%;
+	height: 100%;
+	object-fit: fill;
+}
 
+.gallery figcaption{
+	margin-top: 0.5rem;
 }
 .filtres{
 	display: flex;
@@ -211,7 +417,7 @@ li.inactive {
 	background-color: #1D6154;
 	color:white;
 }
-
+/******* END PORTFOLIO CSS ***********/
 #contact {
 	width: 50%;
 margin: auto;
@@ -261,3 +467,6 @@ footer nav ul {
 	margin: 2em
 }
 
+.inactive {
+	display: none !important;
+}
