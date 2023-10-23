@@ -149,12 +149,12 @@ nav li {
 	font-size: 1.2em;
 }
 
-li:hover {
+li a:hover {
 	color: #B1663C;
 }
-
-li.inactive {
-	display: none;
+header a {
+	all : unset;
+	cursor: pointer;
 }
 
 #introduction {
@@ -183,12 +183,6 @@ li.inactive {
 #portfolio h2 {
 	text-align: center;
 	margin-bottom: 1em;
-}
-
-#portfolio button{
-	color: black;
-	font-weight: bold;
-	
 }
 
 /**** MODAL CSS ****/
@@ -220,8 +214,8 @@ li.inactive {
 	justify-self: center;
 	max-width: 70vh;
 	max-height: 75vh;
-	width: 700px;
-	height: 800px;
+	min-width: 700px;
+	min-height: 800px;
 	padding: 2rem;
 	overflow: auto;
 	background-color: white;
@@ -229,7 +223,7 @@ li.inactive {
 
 #addPic {
 	position: relative;
-	top: 10rem;
+	top: 5rem;
 }
 
 #workForm {
@@ -411,6 +405,7 @@ figure span{
 	border-radius: 20px;
 	padding: 5px 10px;
 	margin: 0 5px;
+	cursor: pointer;
 }
 
 .filtres button:hover, .filtres button.active{
@@ -421,6 +416,8 @@ figure span{
 #contact {
 	width: 50%;
 margin: auto;
+position: relative;
+bottom: 0;
 }
 #contact > * {
 	text-align: center;
